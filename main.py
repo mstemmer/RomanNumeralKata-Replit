@@ -1,10 +1,12 @@
 import pytest
 
+values = {'I': 1}
 
 # Source Code:
 
 def from_roman(roman: str) -> int:
-  return 1
+  number = sum(values[ch] for ch in roman)
+  return number
 
 
 
@@ -12,8 +14,8 @@ def from_roman(roman: str) -> int:
 
 cases = [
   ('I', 1),
-  # ('II', 2),
-  # ('III', 3),
+  ('II', 2),
+  ('III', 3),
 ]
 @pytest.mark.parametrize(['num', 'roman'], cases)
 def test_roman_1(num: int, roman: str):
