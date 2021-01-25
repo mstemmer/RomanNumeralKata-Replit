@@ -4,7 +4,7 @@ import pytest
 # Source Code:
 
 def from_roman(roman: str) -> int:
-  return 100
+  return 1
 
 
 
